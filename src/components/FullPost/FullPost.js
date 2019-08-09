@@ -5,7 +5,8 @@ import './FullPost.css';
 class FullPost extends Component {
     render () {
         let post = <p>Please select a Post!</p>;
-        post = (
+        if(this.props.id)
+     {   post = (
             <div className="FullPost">
                 <h1>Title</h1>
                 <p>Content</p>
@@ -14,7 +15,7 @@ class FullPost extends Component {
                 </div>
             </div>
 
-        );
+        );}
         return post;
     }
 }
